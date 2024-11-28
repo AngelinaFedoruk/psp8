@@ -1,0 +1,83 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #ff6e7f, #bfe9ff);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Горизонтальное выравнивание */
+    gap: 20px; /* Расстояние между картинкой и текстом */
+}
+
+header img {
+    width: 150px; /* Уменьшаем размер логотипа */
+    height: auto;
+    border-radius: 50%; /* Картинка будет круглой */
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Оставшиеся стили для контейнера, кнопок и других элементов */
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #6a4f8d;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6e7f;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.btn:hover {
+    background-color: #f44336;
+    transform: translateY(-5px);
+}
+
+.footer {
+    background-color: #9b59b6;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}

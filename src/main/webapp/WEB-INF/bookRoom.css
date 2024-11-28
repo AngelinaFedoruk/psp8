@@ -1,0 +1,101 @@
+/* Основные настройки */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Добавлен шрифт Roboto */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+.room-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.room-item {
+    position: relative; /* Для наложения псевдоэлемента */
+    width: 100%;
+    height: 300px; /* Задайте нужную высоту */
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden; /* Чтобы псевдоэлемент не выходил за пределы */
+}
+
+/* Добавление фона с прозрачностью */
+.room-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: inherit; /* Наследует изображение из стиля элемента */
+    opacity: 0.6; /* Прозрачность фона */
+    z-index: 1; /* Помещаем псевдоэлемент на задний план */
+}
+
+/* Текст поверх изображения */
+.room-item h2,
+.room-item p {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Затемнение фона текста */
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 2; /* Поверх фонового слоя */
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+/* Кнопка */
+.room-item a {
+    position: relative;
+    background-color: #ff4081; /* Ярко-розовый цвет для кнопки */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    z-index: 2; /* Поверх фонового слоя */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.room-item a:hover {
+    background-color: #45a049;
+}
+
+/* Стиль для кнопки назад */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
